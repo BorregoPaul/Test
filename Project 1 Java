@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class MyClass {
+  public static void main(String[] args) {
+    Scanner myObj = new Scanner(System.in);
+
+    System.out.println("Enter an adjective, and a number within reason:");
+
+    // Grabbing the adjective input
+    String adjective = myObj.nextLine();
+
+    // Grabbing and changing the number input
+    int number = myObj.nextInt();
+	number = number * number;
+	
+	// If they picked 1-10 they do get their adjective
+    // If they were greedy they get the reverse of their adjective
+	if (number <= 100) {
+		System.out.println("You are " + number + "% "+ adjective);
+	}
+	else if (number > 100) {
+		System.out.println("You are " + number + "% not "+ adjective);
+	}
+	System.out.println("End");
+  }
+}
